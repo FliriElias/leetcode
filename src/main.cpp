@@ -1,29 +1,33 @@
 #include <iostream>
-#include "linked_list_cycle/linked_list_cycle.h"
+#include "../include/same_tree/same_tree.h"
 
 int main(int argc, char* argv[]) {
+
     Solution sol;
+    auto *n1 = new TreeNode(1);
+    auto *n2 = new TreeNode(2);
+    auto *n3 = new TreeNode(3);
 
-    auto *l1 = new ListNode(1);
+    n1->left = n2;
+    n1->right = n3;
 
-    auto *l2 = new ListNode(2);
-    auto *l3 = new ListNode(0);
-    auto *l4 = new ListNode(-4);
+    auto *n11 = new TreeNode(1);
+    auto *n22 = new TreeNode(2);
+    auto *n33 = new TreeNode(3);
 
+    n11->left = n22;
+    n11->right = n33;
 
-    l1->next = l2;
-    l2->next = l3;
-    l3->next = l4;
-    // loop
-    l4->next = l2;
+    std::cout << sol.isSameTree(n1, n11) << std::endl;
 
+    delete n1;
+    delete n2;
+    delete n3;
 
-    std::cout << sol.hasCycle(l1) << std::endl;
+    delete n11;
+    delete n22;
+    delete n33;
 
-    delete l1;
-    delete l2;
-    delete l3;
-    delete l4;
 
 
     return 0;
