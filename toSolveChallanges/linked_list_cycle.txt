@@ -1,6 +1,8 @@
 difficulty: easy
 https://leetcode.com/problems/linked-list-cycle/
-
+status: solved
+help: no external help
+proposed difficulty: easy
 
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
